@@ -1,0 +1,1 @@
+scoreboard objectives add trams.EVENTS.player.DROP_ITEM custom:drop

@@ -1,0 +1,10 @@
+{
+     "criteria": {
+          "requirements": {
+               "trigger": "tick"
+          }
+     },
+     "rewards": {
+          "function": "trams:zprivate/as_player/tick"
+     }
+}

@@ -1,11 +1,22 @@
 # Scoreboards
+     # The difference between "trams" and "trams.VALUES" and "trams.CONSTANTS" is that
+     # .VALUES => stores variable values
+     # .CONSTANTS => stores unchangable game constants
+     # just trams => stores actual game values.
+     scoreboard objectives add trams dummy
      scoreboard objectives add trams.CONSTANTS dummy
      scoreboard objectives add trams.VALUES dummy
      scoreboard objectives add trams.TIMER dummy
 
+     # Set Config
+     function trams:global/set_config
+
+
      # ID scoreboard
      scoreboard objectives add trams.ID dummy
      scoreboard players add .global trams.ID 1
+
+
 
 # Add Teams
      # Red Team
@@ -21,3 +32,12 @@
 
 # PRE-LOAD
      function trams:zprivate/handle_events/preload
+
+# BOSSBAR
+     bossbar add trams:main "TRAMS CONFLICT"
+     bossbar set trams:main style progress
+     bossbar set trams:main players @a
+     bossbar set trams:main visible true
+
+# LOAD MESSAGE
+     tellraw @a {"text": "[TRAMS-Main] Loaded."}

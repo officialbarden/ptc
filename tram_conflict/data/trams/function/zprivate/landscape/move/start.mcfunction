@@ -1,0 +1,1 @@
+scoreboard players set .LandscapeState trams.VELOCITY 1

@@ -8,3 +8,7 @@
 # On Player Drop Item
      execute as @a if score @s trams.EVENTS.player.DROP_ITEM matches 1.. run function #trams:events/on_player/drop_item
      scoreboard players reset @a trams.EVENTS.player.DROP_ITEM
+
+# On Player Leave/Rejoin
+     execute as @a if score @s trams.EVENTS.player.REJOIN matches 1.. run function #trams:events/on_player/rejoin
+     scoreboard players reset @a trams.EVENTS.player.REJOIN

@@ -1,0 +1,1 @@
+execute if score @s trams.ID matches -1 run kill @s

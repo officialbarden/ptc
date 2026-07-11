@@ -6,6 +6,7 @@
      scoreboard objectives add trams dummy
      scoreboard objectives add trams.CONSTANTS dummy
      scoreboard objectives add trams.VALUES dummy
+     scoreboard objectives add trams.VELOCITY dummy
      scoreboard objectives add trams.TIMER dummy
 
      # Set Config
@@ -16,8 +17,11 @@
      scoreboard objectives add trams.ID dummy
      scoreboard players add .global trams.ID 1
 
+     # Triggers
+     scoreboard objectives add AFK-Toggle trigger
+     scoreboard players enable @a AFK-Toggle
 
-
+     
 # Add Teams
      # Red Team
      team add team_RED "RED"
@@ -32,12 +36,14 @@
 
 # PRE-LOAD
      function trams:zprivate/handle_events/preload
+     function trams:zprivate/landscape/reset
 
 # BOSSBAR
      bossbar add trams:main "TRAMS CONFLICT"
      bossbar set trams:main style progress
      bossbar set trams:main players @a
      bossbar set trams:main visible true
+     bossbar set trams:main color yellow
 
 # LOAD MESSAGE
      tellraw @a {"text": "[TRAMS-Main] Loaded."}
